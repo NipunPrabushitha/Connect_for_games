@@ -7,7 +7,7 @@ public class Player implements Board{
     }
 
     public Player() {
-        this. board = board;
+        this. board = this.board;
     }
 
     @Override
@@ -45,4 +45,5 @@ public class Player implements Board{
     public Winner findWinner() {
         return null;
     }
+
 }

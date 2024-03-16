@@ -60,7 +60,6 @@ public class BoardImpl implements Board {
                         break;
                     }
                 }
-
             }
         }
     }
@@ -81,22 +80,22 @@ public class BoardImpl implements Board {
                         return new Winner(Piece.BLUE,i,0,i,4);
                     }
                 }
-                    if (pieces[i][1].equals(Piece.GREEN)){
-                        if ((pieces[i][1].equals(pieces[i][2])) && (pieces[i][2].equals(pieces[i][3])) && (pieces[i][0].equals(pieces[i][1]))){
-                            return new Winner(Piece.GREEN,i,0,i,3);
-                        }else if ((pieces[i][1].equals(pieces[i][2])) && (pieces[i][2].equals(pieces[i][3])) && (pieces[i][3].equals(pieces[i][4]))){
-                            return new Winner(Piece.GREEN,i,0,i,4);
-                        }
+                if (pieces[i][1].equals(Piece.GREEN)){
+                    if ((pieces[i][1].equals(pieces[i][2])) && (pieces[i][2].equals(pieces[i][3])) && (pieces[i][0].equals(pieces[i][1]))){
+                        return new Winner(Piece.GREEN,i,0,i,3);
+                    }else if ((pieces[i][1].equals(pieces[i][2])) && (pieces[i][2].equals(pieces[i][3])) && (pieces[i][3].equals(pieces[i][4]))){
+                        return new Winner(Piece.GREEN,i,0,i,4);
                     }
-                    if (pieces[2][j].equals(Piece.BLUE)){
-                        if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[1][j].equals(pieces[2][j])) && (pieces[0][j].equals(pieces[1][j]))){
-                            return new Winner(Piece.BLUE,2,j,1,j);
-                        }else if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[1][j].equals(pieces[2][j])) && (pieces[4][j].equals(pieces[3][j]))){
-                            return new Winner(Piece.BLUE,2,j,4,j);
-                        }else if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[4][j].equals(pieces[3][j])) && (pieces[5][j].equals(pieces[4][j]))){
-                            return new Winner(Piece.BLUE,2,j,5,j);
-                        }
+                }
+                if (pieces[2][j].equals(Piece.BLUE)){
+                    if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[1][j].equals(pieces[2][j])) && (pieces[0][j].equals(pieces[1][j]))){
+                        return new Winner(Piece.BLUE,2,j,1,j);
+                    }else if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[1][j].equals(pieces[2][j])) && (pieces[4][j].equals(pieces[3][j]))){
+                        return new Winner(Piece.BLUE,2,j,4,j);
+                    }else if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[4][j].equals(pieces[3][j])) && (pieces[5][j].equals(pieces[4][j]))){
+                        return new Winner(Piece.BLUE,2,j,5,j);
                     }
+                }
                 if (pieces[2][j].equals(Piece.GREEN)){
                     if ((pieces[2][j].equals(pieces[3][j])) &&(pieces[1][j].equals(pieces[2][j])) && (pieces[0][j].equals(pieces[1][j]))){
                         return new Winner(Piece.GREEN,2,j,1,j);
