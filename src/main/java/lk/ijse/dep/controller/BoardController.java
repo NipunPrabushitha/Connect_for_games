@@ -34,8 +34,7 @@ public class BoardController implements BoardUI {
     private Player aiPlayer;
 
     private void initializeGame() {
-        Board newBoard = new BoardImpl(this) {
-        };
+        Board newBoard = new BoardImpl(this);
         humanPlayer = new HumanPlayer(newBoard);
         aiPlayer = new AiPlayer(newBoard);
     }

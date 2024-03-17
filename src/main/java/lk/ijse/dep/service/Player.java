@@ -1,13 +1,18 @@
 package lk.ijse.dep.service;
 
-public class Player implements Board{
+public class Player implements Board {
     protected Board board;
-    public void movePiece(int col) {
-
-    }
 
     public Player() {
-        this. board = this.board;
+    }
+
+    public Player(Board board) {
+        this.board = board;
+    }
+
+
+    public void movePiece(int col) {
+
     }
 
     @Override
@@ -26,24 +31,22 @@ public class Player implements Board{
     }
 
     @Override
-    public boolean existLegalMove() {
+    public boolean existLegalMoves() {
         return false;
     }
 
     @Override
-    public void updateMove(int col,Piece move) {
+    public void updateMove(int col, Piece move) {
 
     }
-
-    @Override
-    public void updateMove(int col, int row, Piece move) {
-
-    }
-
 
     @Override
     public Winner findWinner() {
         return null;
     }
 
+    @Override
+    public void updateMove(int col, int row, Piece move) {
+
+    }
 }
