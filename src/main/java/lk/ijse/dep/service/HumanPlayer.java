@@ -3,9 +3,6 @@ package lk.ijse.dep.service;
 public class HumanPlayer extends Player{
     private Board board;
 
-   /* public HumanPlayer(Board board) {
-        this.board = board;
-    }*/
 
     public HumanPlayer(Board board) {
         super(board);

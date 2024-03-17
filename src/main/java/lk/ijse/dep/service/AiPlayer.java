@@ -28,19 +28,5 @@ public class AiPlayer extends Player {
                 board.getBoardUI().notifyWinner(board.findWinner());
             }
         }
-
-      /* if (board.isLegalMove(col)){
-            board.updateMove(col, Piece.GREEN);
-            board.getBoardUI().update(col, true);
-
-            if (board.findWinner().getWinningPiece().equals(Piece.EMPTY)){
-                if (!board.existLegalMoves()){
-                    board.getBoardUI().notifyWinner(new Winner(Piece.EMPTY));
-                }
-            }else {
-                board.getBoardUI().notifyWinner(board.findWinner());
-            }
-        }
-    }*/
     }
 }
