@@ -2,22 +2,16 @@ package lk.ijse.dep.service;
 
 import java.util.Random;
 
-public class AiPlayer extends Player {
+public class AiPlayer extends Player {        // IS-A Relationship
     public AiPlayer(Board newBoard) {
         super(newBoard);
-
-
-
-
     }
 
     @Override
     public void movePiece(int col) {
 
-
         int x = colChosser();
-        if (x== -1){
-
+        if (x == -1){
 
             do {
 
@@ -27,6 +21,7 @@ public class AiPlayer extends Player {
                 col = (int)(Math.random()*range);
 
             }while (!board.isLegalMove(col));
+
         }else {
 
             col = x;
@@ -60,7 +55,7 @@ public class AiPlayer extends Player {
 
     private int colChosser() {
 
-        for (int i = 0; i <6; i++) {
+        for (int i = 0; i < 6; i++) {
 
             if (board.isLegalMove(i) ){
                 int row = board.findNextAvailableSpot(i);
